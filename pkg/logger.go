@@ -2,7 +2,7 @@
 // @Project : go-pubchem
 // @Time    : 2023/12/6 11:24
 // @Author  : chengxiang.luo
-// @Email   : chengxiang.luo@pharmaron.com
+// @Email   : chengxiang.luo1992@gmail.com
 // @File    : logger.go
 // @Software: GoLand
 package pkg
