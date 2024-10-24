@@ -1,0 +1,153 @@
+basePath: /api/v1
+definitions:
+  src.CmpdCid:
+    properties:
+      cid:
+        type: integer
+    type: object
+  src.CmpdName:
+    properties:
+      name:
+        type: string
+    type: object
+  src.CmpdSmiles:
+    properties:
+      smiles:
+        type: string
+    type: object
+host: 127.0.0.1:8100
+info:
+  contact:
+    email: andrew.luo1992@gmile.com
+    name: chengxiangLuo
+    url: https://github.com/netluo
+  description: this is a sample server celler server
+  license:
+    name: Apache 2.0
+    url: http://www.apache.org/licenses/LICENSE-2.0.html
+  termsOfService: https://www.swagger.io/terms/
+  title: Golang go-pubchem APIs
+  version: "1.0"
+paths:
+  /db/insertToDbByCid:
+    post:
+      consumes:
+      - application/json
+      description: insert compound info to db by cid
+      parameters:
+      - description: Cid
+        in: body
+        name: cid
+        required: true
+        schema:
+          $ref: '#/definitions/src.CmpdCid'
+      responses:
+        "200":
+          description: '{"msg": "hello wy"}'
+          schema:
+            type: string
+        "400":
+          description: '{"msg": "who are you"}'
+          schema:
+            type: string
+      summary: InsertToDbByCid 把对应Cid的数据写入数据库
+      tags:
+      - db
+  /pug/getCidFromName:
+    post:
+      consumes:
+      - application/json
+      description: insert results to db . If the cid is unique, return the cid, else
+        return nil
+      parameters:
+      - description: 化合物名称
+        in: body
+        name: name
+        required: true
+        schema:
+          $ref: '#/definitions/src.CmpdName'
+      responses:
+        "200":
+          description: '{"msg": "hello wy"}'
+          schema:
+            type: string
+        "400":
+          description: '{"msg": "who are you"}'
+          schema:
+            type: string
+      summary: GetCidFromName 从name查询cid
+      tags:
+      - pug
+  /pug/getCidFromSmiles:
+    post:
+      consumes:
+      - application/json
+      description: 从smiles查询cid，在返回结果前会把结果写入数据库
+      parameters:
+      - description: smiles
+        in: body
+        name: smiles
+        required: true
+        schema:
+          $ref: '#/definitions/src.CmpdSmiles'
+      responses:
+        "200":
+          description: '{"msg": "hello wy"}'
+          schema:
+            type: string
+        "400":
+          description: '{"msg": "who are you"}'
+          schema:
+            type: string
+      summary: GetCidFromSmiles 从smiles查询cid
+      tags:
+      - pug
+  /query/getCmpdFromQueryLimit:
+    post:
+      consumes:
+      - application/json
+      description: 获取不那么准的信息，并写入表里，返回前10个查询结果
+      parameters:
+      - description: 化合物名称
+        in: body
+        name: name
+        required: true
+        schema:
+          $ref: '#/definitions/src.CmpdName'
+      responses:
+        "200":
+          description: '{"statusCode":200,"msg":"","data":{"list":[168478138],"total":1}}'
+          schema:
+            type: string
+        "400":
+          description: '{"statusCode":400,"msg":"error!"}'
+          schema:
+            type: string
+      summary: GetCmpdFromQueryLimit 从query获取化合物信息
+      tags:
+      - query
+  /query/getCmpdWithCasFromCid:
+    post:
+      consumes:
+      - application/json
+      description: 从cid获取化合物信息，返回列表
+      parameters:
+      - description: Cid
+        in: body
+        name: cid
+        required: true
+        schema:
+          $ref: '#/definitions/src.CmpdCid'
+      responses:
+        "200":
+          description: '{"total": 0, "list": []}'
+          schema:
+            type: string
+        "400":
+          description: '{"msg": "who are you"}'
+          schema:
+            type: string
+      summary: GetCmpdWithCasFromCid 从cid获取化合物信息
+      tags:
+      - query
+swagger: "2.0"

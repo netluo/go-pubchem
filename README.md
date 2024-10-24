@@ -1,0 +1,1 @@
+This project provides a Go-based PubChem API library designed to simplify the process of obtaining compound information from a PubChem database. With this library, developers can easily query and extract various attribute data of compounds.
