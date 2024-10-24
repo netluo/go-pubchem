@@ -2,7 +2,6 @@
 // @Project : go-pubchem
 // @Time    : 2024/1/9 9:28
 // @Author  : chengxiang.luo
-// @Email   : chengxiang.luo1992@gmail.com
 // @File    : logger.go
 // @Software: GoLand
 package utils

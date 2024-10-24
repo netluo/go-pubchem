@@ -2,7 +2,6 @@
 // @Project : go-pubchem
 // @Time    : 2024/1/18 16:43
 // @Author  : chengxiang.luo
-// @Email   : chengxiang.luo1992@gmail.com
 // @File    : excel_utils.go
 // @Software: GoLand
 package utils
