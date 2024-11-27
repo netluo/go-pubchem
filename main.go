@@ -29,7 +29,7 @@ func randomInt(min, max int64) int64 {
 // @termsOfService https://www.swagger.io/terms/
 
 // @contact.name chengxiangLuo
-// @contact.url https://github.com/netluo
+// @contact.url https://github.com/cx-luo
 // @contact.email andrew.luo1992@gmile.com
 
 // @license.name Apache 2.0

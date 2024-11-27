@@ -7,7 +7,7 @@
 package pkg
 
 import (
-	l4g "github.com/netluo/log4go"
+	l4g "github.com/cx-luo/log4go"
 	"os"
 	"path/filepath"
 )

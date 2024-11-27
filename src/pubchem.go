@@ -3,8 +3,8 @@ package src
 import (
 	"encoding/json"
 	"fmt"
+	toolkit "github.com/cx-luo/go-toolkit"
 	"github.com/gin-gonic/gin"
-	toolkit "github.com/netluo/go-toolkit"
 	"go-pubchem/dao"
 	"go-pubchem/pkg"
 	"go-pubchem/utils"

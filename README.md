@@ -13,7 +13,7 @@ var MysqlCursor = getMysqlCursor("192.168.2.139", 2881, "luocx@aidb", "ABab12@#"
 ## Run
 ```shell
 # clone repository
-git clone https://github.com/netluo/go-pubchem.git
+git clone https://github.com/cx-luo/go-pubchem.git
 
 cd go-pubchem
 

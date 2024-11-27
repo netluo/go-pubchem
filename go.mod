@@ -3,14 +3,14 @@ module go-pubchem
 go 1.20
 
 require (
+	github.com/cx-luo/go-toolkit v0.0.0-20241127012021-2b9492d6370d
+	github.com/cx-luo/log4go v0.0.0-20231023080450-4aadd3472fc7
 	github.com/gin-gonic/gin v1.10.0
-	github.com/go-resty/resty/v2 v2.14.0
 	github.com/go-sql-driver/mysql v1.7.1
 	github.com/jmoiron/sqlx v1.3.5
-	github.com/netluo/go-toolkit v0.0.0-20231201031548-12b1eb984ece
-	github.com/netluo/log4go v0.0.0-20231023080450-4aadd3472fc7
 	github.com/swaggo/files v1.0.1
 	github.com/swaggo/gin-swagger v1.6.0
+	github.com/swaggo/swag v1.8.12
 	github.com/xuri/excelize/v2 v2.8.1
 	go.uber.org/zap v1.27.0
 	gopkg.in/natefinch/lumberjack.v2 v2.2.1
@@ -46,7 +46,6 @@ require (
 	github.com/pelletier/go-toml/v2 v2.2.2 // indirect
 	github.com/richardlehane/mscfb v1.0.4 // indirect
 	github.com/richardlehane/msoleps v1.0.3 // indirect
-	github.com/swaggo/swag v1.8.12 // indirect
 	github.com/toolkits/file v0.0.0-20160325033739-a5b3c5147e07 // indirect
 	github.com/twitchyliquid64/golang-asm v0.15.1 // indirect
 	github.com/ugorji/go/codec v1.2.12 // indirect
